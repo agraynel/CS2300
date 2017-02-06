@@ -1,0 +1,419 @@
+ /* CREDITS: I mainly refer to: http://www.website-templates.info/homepage/free-templates/03/1/page2.html#
+      and http://www.website-templates.info/homepage/free-templates/04/1/index.html
+      Rabbit's image taken by me.
+  */
+
+body {
+  color: #FFFFFF;
+  background-color: #000000;
+  font-family: verdana,arial,helvetica,sans-serif;
+  font-size: 9pt;
+  scrollbar-face-color:#717171;
+  scrollbar-track-color:#000000;
+  scrollbar-arrow-color:#C0C0C0;
+  scrollbar-shadow-color:#C0C0C0;
+  scrollbar-highlight-color:#C0C0C0;
+  scrollbar-3dlight-color:#9F9F9F;
+  scrollbar-darkshadow-color:#000000;
+}
+
+p {
+  margin: 4px 8px;
+  text-align: justify;
+}
+table,td,tr {
+  color: #FFFFFF;
+  background-color: #717171;
+  font-family: verdana,arial,helvetica,sans-serif;
+  font-size: 15pt;
+}
+
+.header {
+  height: 300px;
+  padding: 10px;
+  width: 950px;
+  color: #FFB950;
+  background-color: #FFFFFF;
+  background:url('../images/header.jpg') no-repeat;
+  background-position: 0% 45%;
+  background-size: 100% auto;
+  }
+
+#headertext {
+  text-shadow:5px 5px 6px #333333;
+  color: #C0C0C0;
+  background-color: transparent;
+  font-size: 50pt;
+  font-family: "Trebuchet MS",verdana,arial,helvetica,sans-serif;
+  padding-right: 20px;
+  font-style: italic;
+  text-align: left;
+}
+
+#navi {
+  text-align: left;
+  background-color: #000;
+  list-style: none;
+}
+
+#navi li {
+  display: inline-block;
+  padding: 20px 30px;
+}
+
+#navi a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#navi:hover {
+  color: #0000ff;
+}
+
+.mainwindow {
+  color: #FFFFFF;
+  background-color: #666666;
+}
+
+.alltext {
+  color: #FFFFFF;
+  background-color: #808080;
+  font-family: verdana,arial,helvetica,sans-serif;
+  font-size: 10pt;
+  margin: 0px;
+  padding: 0px 10px 10px 0px;
+}
+
+h1 {
+  color: #C0C0C0;
+  background-color: transparent;
+  font-family: verdana,arial,helvetica,sans-serif;
+  font-size: 20pt;
+  text-align: center;
+  padding: 0px 0px 0px 3px;
+  text-shadow:2px 2px 3px #333333;
+}
+
+h2 {
+  color: #9F9F9F;
+  background-color: #FFFFFF;
+  font-family: verdana,arial,helvetica,sans-serif;
+  font-size: 16pt;
+  padding: 6px;
+}
+
+h3 {
+  color: #FFFFFF;
+  font-family: verdana,arial,helvetica,sans-serif;
+  font-size: 12pt;
+  text-align: left;
+}
+
+h4 {
+  color: #c0c0c0;
+  font-family: verdana,arial,helvetica,sans-serif;
+  font-size: 10pt;
+  padding: 1px 1px 1px 1px;
+}
+
+a:link, a:visited, a:active {
+  color: #000000;
+  background-color: transparent;
+  text-decoration: none;
+  font-family: verdana,arial,helvetica,sans-serif;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #FFFFFF;
+  background-color: #717171;
+  text-decoration: none;
+  font-family: verdana,arial,helvetica,sans-serif;
+  font-weight: bold;
+}
+
+/** homepage round-about*/
+
+#featured-area {
+  height:400px;
+  width:600px;
+  margin:30px auto 0 auto;
+  left:auto;
+}
+
+/*.index {
+  position: left;
+}*/
+
+.roundabout-holder {
+  list-style:none;
+  width:600px;
+  height:400px;
+  margin:0px auto;
+}
+
+.roundabout-moveable-item {
+  font-size: 4px!important;
+  height: 300px;
+  width: 300px;
+  cursor: pointer;
+  padding:3px;
+  border:1px solid #cccccc;
+  -webkit-border-radius:3px;
+  -moz-border-radius:3px;
+  background:#f9f9f9;
+  left:auto;
+}
+
+.roundabout-moveable-item img{
+  height:100%;
+  position:left;
+  width:100%;
+  background-color:#FFFFFF;
+  margin:0;
+  left:auto;
+}
+
+.roundabout-in-focus {
+  cursor: auto;
+}
+
+.roundabout-in-focus:hover{
+  -webkit-box-shadow:0px 0px 20px #787878;
+  -moz-box-shadow:0px 0px 20px #787878;
+  background:#f9f9f9;
+}
+
+.roundabout-holder span {
+  display:none;
+}
+
+.roundabout-in-focus:hover span {
+  display:inline;
+  position:center;
+  bottom:5px;
+  left:5px;
+  padding:8px 20px;
+  background:#f9f9f9;
+  color:#3366cc;
+  z-index:999;
+  -webkit-border-top-left-radius:5px;
+  -moz-border-radius-topLeft:5px;
+  border-left:1px solid #aaaaaa;
+  border-top:1px solid #aaaaaa;
+}
+
+.roundabout a:active, .roundabout a:focus, .roundabout a:visited {
+  outline:none;
+  text-decoration:none;
+}
+
+.roundabout li {
+  margin:10
+}
+
+#featured-area .ban_l_btn,#featured-area .ban_r_btn { 
+  position: absolute; 
+  top: 80%;
+  margin-top:25px; 
+  left: 20px; 
+  right: 20px;
+  display: block; 
+  width: 65px; 
+  height: 68px; 
+  background: url(../images/wid65Btn.png) 0 0 ; 
+  /* CREDITS: the buttons come from B5 website:
+  http://www.bcty365.com/;
+  */
+  z-index: 9; 
+  overflow: hidden; 
+}
+
+#featured-area .ban_r_btn { 
+  left:auto; 
+  right:-1px; 
+  background-position: -65px 0; 
+}
+
+#featured-area ul li div {
+  width:100%;
+  height: 100%;
+}
+
+/* tips page */
+
+  /* CREDITS: the Flexible Box Layout reference
+  https://tympanus.net/codrops/css_reference/flexbox/
+  */
+
+.tip_container {    
+  overflow: auto;
+  display: inline-flex; 
+  margin: 45px auto;
+  width: 100%;
+}
+
+.tipflex {
+  margin: 0 20px;
+  background-color: #cccccc;
+  border-radius: 20px;
+  display: block;
+  border: solid 4px #FFFFFF;
+  width: 300px;
+}
+
+.tipflex p {
+  font-size: 12pt;
+  margin: auto auto 25px auto;
+  text-align: left;
+  color: #4A4A4A;
+  width: 85%;
+}
+
+.tipflex:hover {
+  background-color: #FFFFFF;
+}
+
+/* wow page */ 
+.wow {
+  width: 300px;
+  height: 300px;
+  margin: 40px;
+  border-radius: 15px;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  background-size: 100%;
+}
+
+.wow_container {
+  padding: 30px 0;
+  display: block;
+}
+
+.wow_divide {
+  margin: auto;
+  width: 85%;
+  height: 4px;
+  background-color: #777777;
+}
+
+.wow_item { 
+  margin: 50px auto;
+  display: flex; 
+  width: 85%;
+}
+
+.wow_content {
+  margin: auto 0 auto 40px;
+  width: 85%;
+}
+
+/* about page*/
+.about {
+  position: relative;
+  background-size: 100%;
+  width: 400px;
+  height: 300px;
+  margin: 30px;
+  border-radius: 20px;
+  overflow: hidden;
+  display: inline-block;
+  background-color: transparent;
+}
+
+.about_image {
+  object-fit: cover;
+  height: 300px;
+  width: 400px;
+}
+
+.about_description {
+  opacity:0.7;
+  background-color: #FFFFFF;
+  width: 100%;
+  top: 220px;
+  transition: top 0.7s ease;
+  display: flex;
+  margin: 0;
+  padding: 5px;
+  position: absolute;
+}
+
+.about_description h4 {
+  margin: 15px;
+  }
+
+.about:hover .about_description {
+  top: 0px;
+  transition: top 1s ease;
+}
+
+/* FAQ page*/
+
+#faq-divide {
+  margin: 10px auto 20px auto;
+  width: 7px;
+  height: 480px;
+  background-color: #333333;
+}
+
+#faq_container {
+  margin: 2px;
+  display: inline-flex;
+  width: 100%;
+}
+
+.question_container {
+  margin: auto;
+  width: 35%;
+}
+
+.question input, textarea {
+  outline: none;
+  font-size: 20px;
+  min-height: 40px;
+  height: 40px;
+}
+
+.question input[type=submit] {
+  margin: 8px auto 0 auto;
+  color: #707070;
+  background-color: #cccccc;
+  width: 100px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  text-align: center;
+  display: block;
+}
+
+.question input[type=text], textarea {
+  margin: 10px;
+  height: 30px;
+  width: 100%;
+  font-size: 35px;
+  border-radius: 7px;
+  border: solid 2px #333333;
+  color: #4A4A4A;
+  padding: 12px 5px 5px 12px;
+}
+
+.question textarea {
+  height: 130px;
+}
+
+/**footer*/
+.footlink {
+  height: 25px;
+  background-color: #717171;
+  color: #FFFFFF;
+  text-align: right;
+  padding-top: 1px;
+  padding-right: 30px;
+}
+
+.hpb {
+  font-family: verdana,arial,helvetica,sans-serif;
+  font-size: 5pt;
+  font-weight: normal;
+}
