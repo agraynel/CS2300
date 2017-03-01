@@ -1,0 +1,313 @@
+/* CREDITS: I mainly refer to: http://www.website-templates.info/homepage/free-templates/03/1/page2.html#
+      and http://www.website-templates.info/homepage/free-templates/04/1/index.html
+      many refer to my last project1 in CS2300.
+      images from Don't starve wikia.
+  */
+
+/* main */ 
+
+ html * {
+   font-family: Montserrat;
+}
+
+textarea {
+    -webkit-appearance: textarea;
+    background-color: white;
+    -webkit-rtl-ordering: logical;
+    flex-direction: column;
+    cursor: auto;
+    width: 780px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    padding-left: 10px;
+    margin: 5px;
+    border-radius: 8px;
+    height: 100px;
+    font-size: 35px;
+	font-weight: normal;
+	border: solid 1px #979797;
+}
+
+body {
+	margin: auto;
+	background-color: #000000;
+}
+
+a {
+	display: block;
+	width: 200px;
+	font-size: 35px;
+	font-weight: bold;
+	text-align: center;
+	color: #FFF0AC;
+	font-family: 'Amatic SC', cursive; 
+  	text-decoration: none;
+  	-webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: #424200;
+    text-shadow: 2px 2px 2px #003E3E;
+}
+
+a b {
+	color: purple;
+}
+
+ul {
+	list-style-type: none;
+}
+
+h1 {
+	font-size: 25px;
+	text-align: left;
+	color: #FFFFFF;
+	font-weight: bold;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: #424200;
+    margin: 20px;
+    text-shadow:2px 3px 3px #333333;
+	font-family: 'Amatic SC', cursive; 
+}
+
+h2 {
+	font-size: 40px;
+	text-transform:uppercase;
+	text-align: left;
+	color: #7B7B7B;
+	font-weight: bold;
+	padding-right: 30px;
+	padding-left: 10px;
+    margin: 2px;
+}
+
+h3 {
+	margin: 0;
+	padding: 0 0;
+	font-size: 20px;
+	font-weight: bold;
+	word-wrap: break-word;
+	position:center;
+	color: #694002;
+}
+
+h4 {
+	margin: 0;
+	padding: 0 0;
+	font-size: 17px;
+	font-weight: bold;
+	word-wrap: break-word;
+	color: #691002;
+}
+
+h5 {
+	margin: 0;
+	padding: 3px;
+	font-size: 14px;
+	color: #FFEEDD;
+	text-align: center;
+}
+
+
+/* header and navigation */ 
+
+#header {
+	background-image: url("../assets/headerbackground.jpg");
+	width: 1024px;
+	height: 640px;
+}
+
+#divider {
+	background-color: #003E3E;
+	width: 100%;
+	height: 2px;
+	margin: 10px 1px 10px 1px;
+}
+
+#navigation {
+	margin: 0 auto;
+	width: 100%;
+	height: 50px;
+	display: flex;
+	background-color: #000000;
+}
+
+/* add and search form */ 
+
+.add_error {
+	width: 97%;
+	margin: 10px 20px 20px 5px;
+	display: flex;
+}
+
+.add_error_message {
+	margin: auto 0;
+	text-align: right;
+	font-size: 15px;
+	font-weight: normal;
+	max-height: 50px;
+	color: #AE0000;
+}
+
+.add_search_body {
+	background-color: #D8D8D8;
+	margin: 0 auto;
+	padding: 15px;
+	width: 85%;
+	border-radius: 10px;
+	
+}
+
+.form_container input[type = text] {
+	border-radius: 8px;
+	margin: 2px;
+	padding: 5px 20px;
+	height: 50px;
+	width: 150px;
+	font-size: 35px;
+	font-weight: normal;
+	border: solid 1px #979797;
+}
+
+.form_container input[type = radio] {
+	margin: 2px;
+	padding-right: 10px;
+}
+
+.form_container input[class = "button"] {
+	width: 25%;
+	font-weight: bold;
+    background-color: #3C3C3C;
+    color: white;
+    font-size: 38px;
+    border-right: solid 3px #272727;
+	border-bottom: solid 2px #272727;
+	padding: 1px;
+	border-radius: 8px;
+	height: 58px;
+	margin: 5px 0 5px 0;
+}
+
+.form_container input[class="button"]:hover {
+	background-color: #600000;
+	color: 	#FFD2D2;
+	border-right: solid 3px #4D0000;
+	border-bottom: solid 2px #4D0000;
+	transition: background-color 0.6s ease;
+}
+
+/* Search form */
+
+.form_container select {
+	border-radius: 8px;
+	margin: 2px;
+	padding: 5px 20px;
+	height: 62px;
+	width: 300px;
+	outline: none;
+	font-size: 40px;
+	font-weight: normal;
+	border: solid 1px #979797;
+}
+
+.first_line {
+	display: flex;
+	margin: 2px;
+	padding: 0 1px;
+}
+
+.form_container input[id = "inputImage"] {
+	width: 800px;
+
+}
+
+/* Catalog */ 
+/* CREDITS: from my about.php in project1
+	pictures from Don't Starve Wikia
+	http://dontstarve.wikia.com/wiki/Don%27t_Starve_Wiki
+ */ 
+
+.catalog {
+	background-color: #f2f2f2;
+	padding-bottom: 100px;
+}
+
+.catalog_main {
+	flex-wrap: wrap;
+	display: flex;
+	margin: 0 auto;
+	width: 80%;
+}
+
+.catalog_header {
+	margin: 0 auto 20px auto;
+	display: flex;
+	width: 80%;
+	padding: 20px;
+}
+
+.catalog_sort {
+	float: right;
+	display: flex;
+	width: 60%;
+}
+
+.catalog_item {
+	position: relative;
+	overflow: hidden;
+	background-size: 100%;
+	margin: 20px;
+	width: 210px;
+    height: 280px;
+	min-height: 250px;
+	border-radius: 10px;
+	display: inline-block;
+  	background-color: transparent;
+}
+
+.catalog_image {
+	object-fit: cover;
+	width: 210px;
+    height: 280px;
+}
+
+.catalog_description {
+	position: absolute;
+	width: 100%;
+	top: 160px;
+	transition: top 0.5s ease;
+}
+
+.catalog_item:hover .catalog_description {
+	top: 0px;
+	transition: top 0.5s ease;
+}
+
+.show_catalog {
+	display: flex;
+	margin: 0;
+	padding: 10px;
+	opacity:0.8;
+	height: 100px;
+	background-color: #FFFFFF;
+}
+
+.hide_catalog {
+	padding: 10px;
+}
+
+.name {
+	margin: 0 0 0 0px;
+	font-size: 20px;
+	position: center;
+	font-weight: bold;
+	color: #750000;
+}
+
+.description {
+	margin: 0 0 0 10px;
+}
+
+.hide_catalog {
+	background-color: #EA7500;
+	padding: 8px 5px 192px 5px;
+	height: 100%;
+	opacity:0.6;
+}

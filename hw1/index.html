@@ -1,0 +1,78 @@
+<!-- 
+	
+	Do not touch this file. You do not need to edit anything in this file.
+
+	You are highly encouraged to look at the DOM in the developer console however.
+
+ -->
+<!doctype html>
+<html>
+	<head>
+		<title>INFO/CS 2300 - Homework 1</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+		<!-- JS render templates -->
+		<script src="scripts/views/pokemon.js"></script>
+		<script src="scripts/main.js"></script>
+	</head>
+	<body>
+		<div class="pokemon">
+			<div class="banner container-fluid">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<img class="img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2000px-International_Pok%C3%A9mon_logo.svg.png">
+					</div>	
+				</div>
+			</div>
+			<div class="menu container">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 container">
+					<form class="form-inline">
+  						<div class="input-group mb-2 col-xs-12 mb-sm-3 col-lg-4 col-sm-12">
+							<label class="mr-sm-2" for="font-select">Font-size: </label>
+							<select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="font-select">
+								<option value="16" selected>16 pixels</option>
+								<option value="17">17 pixels</option>
+								<option value="18">18 pixels</option>
+								<option value="19">19 pixels</option>
+								<option value="20">20 pixels</option>
+							</select>
+						</div>
+    					<div class="input-group col-lg-4 col-sm-12 col-xs-12 mb-3 mb-sm-3">
+							<input type="text" class="form-control add-font" id="fontSizeInput" placeholder="Font-size">
+							<button type="button" id="add-font-size" class="btn btn-primary">Add</button>
+    					</div>
+    					<div class="form-check col-lg-4 col-sm-12 col-xs-12 mb-2 mb-sm-3">
+    						<label class="form-check-label">
+      							<input class="form-check-input" id="hide-sprites" type="checkbox"> Hide Sprites
+    						</label>
+  						</div>
+  						<label class="sr-only" for="inlineFormInputGroup">Pokemon name</label>
+						<div class="input-group col-lg-4 col-sm-12 col-xs-12 mb-2 mb-sm-3">
+							<div class="input-group-addon">Search</div>
+							<input type="text" class="form-control search" id="inlineFormInputGroup" placeholder="By pokemon name">
+						</div>
+						<div class="input-group col-lg-4 col-sm-12 col-xs-12 mb-2 mb-sm-3">
+							<label class="mr-sm-2" for="sort-select">Sort By: </label>
+							<select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="sort-select">
+								<option selected>Select an Option</option>
+								<option value="name">Name</option>
+								<option value="weight">Weight</option>
+								<option value="statistics">Stats</option>
+								<option value="types">Types</option>
+							</select>
+						</div>
+					</form>
+				</div>	
+			</div>
+			<div class="results">
+				<div class="container">
+					<div class="row"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

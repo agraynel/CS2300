@@ -1,0 +1,10 @@
+Wilson\tMale\t150\t200\t150\tGrows a magnificent beard.\thttp://vignette3.wikia.nocookie.net/dont-starve-game/images/7/78/Wilson.png/revision/latest?cb=20140330212319\teasy
+Willow\tFemale\t150\t120\t150\tHas a sweet lighter. Lights fires when nervous.\thttp://vignette1.wikia.nocookie.net/dont-starve-game/images/b/b2/Willow.png/revision/latest?cb=20130602060445\tmedium
+Wolfgang\tMale\t150\t200\t300\tGets stronger with a full belly. Is afraid of the dark and monsters.\thttp://vignette3.wikia.nocookie.net/dont-starve-game/images/a/af/Wolfgang.png/revision/latest?cb=20140330211944\teasy
+Wendy\tFemale\t150\t200\t150\tHaunted by her twin sister. Comfortable with darkness. Doesn't hit very hard.\thttp://vignette3.wikia.nocookie.net/dont-starve-game/images/2/2d/Wendy.png/revision/latest?cb=20140330212641\teasy
+WX78\tMale\t100\t100\t100\tNot a picky eater. Charged by lightning, damaged by water. Can upgrade with gears.\thttp://vignette3.wikia.nocookie.net/dont-starve-game/images/c/c9/WX-78.png/revision/latest?cb=20140119124649\tmedium
+Wickerbottom\tFemale\t150\t150\t250\tKnows many things. Self publishes books. Can't sleep, hates food spoilage.\thttp://vignette1.wikia.nocookie.net/dont-starve-game/images/c/c8/Wickerbottom.png/revision/latest?cb=20140330212735\teasy
+Woodie\tMale\t150\t150\t200\tHas a lovely axe. Has a terrible secret.\thttp://vignette3.wikia.nocookie.net/dont-starve-game/images/2/23/Woodie.png/revision/latest?cb=20140330212814\tmedium
+Wes\tMale\t113\t113\t150\tHas trouble staying alive. Practices Balloonomancy.\thttp://vignette2.wikia.nocookie.net/dont-starve-game/images/0/0f/Wes.png/revision/latest?cb=20140330212909\tdifficult
+Maxwell\tMale\t150\t75\t200\tIs dapper but frail. Can split his mind into pieces. On a first-name basis with the night.\thttp://vignette1.wikia.nocookie.net/dont-starve-game/images/d/d5/Maxwell.png/revision/latest?cb=20140330212229\tdifficult
+agraynel\tFemale\t333\t233\t233\tdwqdqwwq\thttps://www.google.com/logos/doodles/2017/valentines-day-2017-day-4-5165155370401792.2-res.png\tDifficult
