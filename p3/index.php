@@ -39,6 +39,6 @@
 	
 	<!-- Welcome message -->
   <h1>H.c Photography</h1>
-	<img class="image_container" src="assets/background.jpg" alt="index_background" />
+	<img class="image_origin" src="assets/background.jpg" alt="index_background" />
 	</body>
 </html>

@@ -1,34 +1,43 @@
-    <!--
-    CREDITS: All of the photos and background are from my roommate, Chuan Huang
-        I downloaded from his loft: http://akimotoyasushi.lofter.com/
-        Others were sent to me from him by e-mail
-    -->
+<?php 
+    include("header.php"); 
+    include("query.php");       
+?>
 
-    <!-- header -->
-    <?php 
-    	include("header.php"); 
-    	include("query.php");	
-    ?>
+<!--
+CREDITS: All of the photos and background are from my roommate, Chuan Huang
+    I downloaded from his loft: http://akimotoyasushi.lofter.com/
+    Others were sent to me from him by e-mail
+-->
 
 
+<?php 
+
+    if (!isset($_SESSION['logged_user'])) { 
+    // If a user is logged in 
+?> 
+        <div class = "display_information">
+            <h1>You can't edit as a guest!</h1>                
+            <h1>Please <a href='login.php'>log in</a></h1>
+        </div> 
+<?php } else { ?> 
     <div class="add_body">
 
         <div class="form_container">
             <h1>Add albums</h1>
             <form id = "add_form" name = "add_form" class = "form" method = "POST" action = "add.php" onsubmit = "return validateAlbum()">
                 <div class="form_item">
-                <h6>Album name: </h6>
-                <input placeholder="Name your album" type="text" name="album_name" id = "album_name"/>
-            </div>
-            <div class="form_item">
-                <h6>Introduction:</h6>
-                <input placeholder="Introduce your album" type="text" name="album_intro" id = "album_intro"/>
-            </div>
-            <div class="form_item">
-                <input id = "add_album" class="button" type = "submit" name = "add_album" value = "ADD"/> 
-            </div>
+                    <h6>Album name: </h6>
+                    <input placeholder="Name your album" type="text" name="album_name" id = "album_name"/>
+                </div>
+                <div class="form_item">
+                    <h6>Introduction:</h6>
+                    <input placeholder="Introduce your album" type="text" name="album_intro" id = "album_intro"/>
+                </div>
+                <div class="form_item">
+                    <input id = "add_album" class="button" type = "submit" name = "add_album" value = "ADD"/> 
+                </div>
             <!-- This is the place to sign the error!-->
-            <h3 id="add_error_message" class="add_error_message"></h3>
+                <h3 id="add_error_message" class="add_error_message"></h3>
             </form>
         </div>
 
@@ -87,7 +96,7 @@
             </form>
         </div>
     </div>
-
+<?php } ?> 
 
     <!-- CREDITS: lecture notes other course resources
     -->
@@ -123,12 +132,13 @@
                 //I asked in Piazza and TA answered that I can set a default album.
                 //All photos will go into the default album in query.php        
                 $albums = array();
-                if (isset($_POST['display_albums']))
+                if (isset($_POST['display_albums'])) {
                     foreach($_POST['display_albums'] as $album_id){
                         $albums[] = $album_id;
                     }
+                }
                 //user will be implemented later in milestone 3
-                $photo = new Photos(0, $name, 0, $filename, $intro, 1);
+                $photo = new Photos(0, $name, 0, $filename, $intro);
                 move_uploaded_file($file['tmp_name'], "../assets/".$filename);
                 $query3 = new Query();  
                 $query3->upload($photo, $albums);

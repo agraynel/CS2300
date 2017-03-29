@@ -69,15 +69,13 @@
 		public $pDateCreate;
 		public $pURL;
 		public $pIntro;
-		public $uID;
 
-		function __construct($pID = 0, $pName = "", $pDateCreate = "", $pURL = "", $pIntro = "", $uID = 0) { 
+		function __construct($pID = 0, $pName = "", $pDateCreate = "", $pURL = "", $pIntro = "") { 
 			$this->pID = $pID;
 			$this->pName = $pName;
 			$this->pDateCreate = $pDateCreate; 
 			$this->pURL = $pURL;
 			$this->pIntro = $pIntro;
-			$this->uID = $uID;
 		}
 
 		function get_id(){
@@ -89,7 +87,7 @@
     	}
 
     	function get_date(){
-    		return $this->photoDateCreate;
+    		return $this->pDateCreate;
     	}
 
     	function get_url(){
@@ -98,11 +96,6 @@
 
     	function get_intro(){
     		return $this->pIntro;
-    	}
-                
-        //function of user id will be implemented in milestone 3
-    	function get_userid(){
-    		return $this->uID;
     	}
 	}
 
