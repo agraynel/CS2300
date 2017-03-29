@@ -55,6 +55,7 @@ function validateAlbum() {
   if (!aIntro) {
     showError("add_error_message", "Please enter a valid introduction between 0 ~ 100 characters!");
   }
+  isValidAlbum = aName && aIntro;
   if (isValidAlbum) {
     showError("add_error_message", "Album added!");
   }
@@ -77,7 +78,7 @@ function validImage(file) {
         filename = filename.substring(1);
     }
   //console.log(filename);
-  var isvalidImage = filename.endsWith(".jpg") || filename.endsWith(".png") || filename.endsWith(".bmp") || filename.endsWith(".gif") || filename.endsWith(".jpge");
+  var isvalidImage = filename.endsWith(".jpg") || filename.endsWith(".png") || filename.endsWith(".bmp") || filename.endsWith(".gif") || filename.endsWith(".jpge") || filename.endsWith(".JPG") || filename.endsWith(".PNG") || filename.endsWith(".BMP") || filename.endsWith(".GIF") || filename.endsWith(".JPGE");
   return isvalidImage;
 }
 
@@ -90,13 +91,13 @@ function validatePhoto() {
   //console.log(file);
   var pIntro = validIntro(document.forms.upload_photo.photo_intro.value);
   if (!pName) {
-    showError(add_error_message1, "Please enter a valid name.");
+    showError("add_error_message1", "Please enter a valid name.");
   }
   if (!pIntro) {
-    showError(add_error_message1, "Please enter a valid introduction between 0 ~ 100 characters!");
+    showError("add_error_message1", "Please enter a valid introduction between 0 ~ 100 characters!");
   }
   if (!pImage) {
-    showError(add_error_message1, "Please upload a valid image!");
+    showError("add_error_message1", "Please upload a valid image!");
   }
   var isValidPhoto = pName && pImage && pIntro;
   return isValidPhoto;

@@ -113,7 +113,7 @@ CREDITS: All of the photos and background are from my roommate, Chuan Huang
         }
 
         //upload the photo
-        if (isset($_POST['upload'])) {
+        if (!empty($_POST['photo_name']) && isset($_POST['upload'])) {
             // filter: htmlentities 
             $name = htmlentities($_POST['photo_name']);
             $intro = htmlentities($_POST['photo_intro']);

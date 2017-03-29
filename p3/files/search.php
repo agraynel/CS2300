@@ -18,11 +18,11 @@
 		<!-- Search and name fields -->
 		<div class="form_item">
 		 	<h6>Album name: </h6>
-			<input id="search_album_name" type="text" placeholder="Search name" name="search_album_name" maxlength="20" autofocus pattern="[0-9A-Za-z-_ ]*">
+			<input id="search_album_name" type="text" placeholder="Search name" name="search_album_name" maxlength="20">
 		</div>
 		<div class="form_item">
 		 	<h6>Album introduction: </h6>
-			<input id="search_album_intro" type="text" placeholder="Search introduction" name="search_album_intro" maxlength="100" autofocus pattern="[0-9A-Za-z-_ ]*">
+			<input id="search_album_intro" type="text" placeholder="Search introduction" name="search_album_intro" maxlength="100">
 		</div>
 		<div class="form_item">
             <input id = "search_album" class="button" type = "submit" name = "search_album" value = "SEARCH"/> 
@@ -37,11 +37,11 @@
 		<!-- Search and name fields -->
 		<div class="form_item">
 			 <h6>Photo name: </h6>
-			<input id="search_photo_name" type="text" placeholder="Search name" name="search_photo_name" maxlength="20" autofocus pattern="[0-9A-Za-z-_ ]*">
+			<input id="search_photo_name" type="text" placeholder="Search name" name="search_photo_name" maxlength="20">
 		</div>
 		<div class="form_item">
 		 	<h6>Photo introduction: </h6>
-			<input id="search_photo_intro" type="text" placeholder="Search introduction" name="search_photo_intro" maxlength="100" autofocus pattern="[0-9A-Za-z-_ ]*">
+			<input id="search_photo_intro" type="text" placeholder="Search introduction" name="search_photo_intro" maxlength="100">
 		</div>
 		<div class="form_item">
 		 	<h6>Albums: </h6>

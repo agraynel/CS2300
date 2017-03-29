@@ -45,15 +45,15 @@ CREDITS: All of the photos and background are from my roommate, Chuan Huang
 ?>
             <div class='edit_container'>
               <div class='edit_item'>
-                 <?php echo " <button class = 'button' onclick = 'showEditAlbumPopup(" . $aID . ")'><h7 id='edit-album-" . $aID . "' data-album-title='" . $aName . "'>Edit Album</h7></button>" ?>
-                <?php echo " <button class = 'button' onclick = 'showDeleteAlbumPopup(" . $aID . ")'><h7 id = '#$aID'>Delete Album</h7></button>" ?>
+                 <?php echo " <button class = 'button' onclick = 'show_edit_album(" . $aID . ")'><h7 id='edit-album-" . $aID . "' data-album-title='" . $aName . "'>Edit Album</h7></button>" ?>
+                <?php echo " <button class = 'button' onclick = 'show_delete_album(" . $aID . ")'><h7 id = '#$aID'>Delete Album</h7></button>" ?>
               </div>
             </div>
 
 <?php
             }
           } else { // If no user is logged in
-            print "<h7><a href='login.php'>Log in </a>to edit this album.</h7>";
+            echo "<h6>You can't edit as a guest!<h6>";
           }
 ?>
         <h3><br>Create on: <?php echo $aDateCreate ?></h3>
@@ -125,7 +125,7 @@ CREDITS: All of the photos and background are from my roommate, Chuan Huang
 
  ?> 
             <div class='edit_delete_button'>
-              <?php echo "<button onclick='showDeletePhotoInAlbumPopup(" . $pID . ", ".$id.")'><h7 id='#".$pID."'>Remove</h7></button>" ; ?>
+              <?php echo "<button onclick='show_remove_album(" . $pID . ", ".$id.")'><h7 id='#".$pID."'>Remove</h7></button>" ; ?>
             </div>
             <?php } ?>
         </div>
@@ -172,9 +172,9 @@ CREDITS: All of the photos and background are from my roommate, Chuan Huang
 ?>
             <div class='edit_container'>
               <div class='edit_item'>
-                <?php echo "<button class='button' onclick='showEditPhotoPopup(" . $pID.")'><h7 id='edit_photo_".$pID."'>Edit Photo</h7></button>" ?>
+                <?php echo "<button class='button' onclick='show_edit_photo(" . $pID.")'><h7 id='edit_photo_".$pID."'>Edit Photo</h7></button>" ?>
 
-                <?php echo "<button class='button' onclick='showDeletePhotoPopup(".$pID.")'><h7 id='##".$pID."'>Delete Photo</h7></button>" ?>
+                <?php echo "<button class='button' onclick='show_delete_photo(".$pID.")'><h7 id='##".$pID."'>Delete Photo</h7></button>" ?>
               </div>
             </div>
           </div>
@@ -190,8 +190,8 @@ CREDITS: All of the photos and background are from my roommate, Chuan Huang
 <!-- Edit and delete modal area -->
 <?php
   // Delete album with id when Delete Album Form submitted
-  if (isset($_POST['deleteAlbum'])) {
-    $deleted_album_id = $_POST['deleteAlbumIdField'];
+  if (isset($_POST['delete_album'])) {
+    $deleted_album_id = $_POST['delete_album_id'];
     if ($deleted_album_id != 1) {
       $query = new Query();
       //get photos in this album
@@ -241,9 +241,9 @@ MODAL PART
 <!-- delete album part -->
 <div id='delete_album_popup' class='modal'>
   <div id='delete_album_content' class='modal-content'>
-      <button class='close' onclick='closeDeleteAlbumPopup()'>×</button>
+      <button class='close' onclick='close_delete_album()'>×</button>
       <div class='popup-message-container'>
-        <h7><b>WARNING:</b> YOU ARE GOING TO DELETE THIS ALBUM!</h7>
+        <h7><strong>WARNING:</strong> YOU ARE GOING TO DELETE THIS ALBUM!</h7>
         <form class='form' name='delete_album_form' action='gallery.php' method='POST'>
           <input type='hidden' id='delete_album_id' name='delete_album_id' value='0'><br>
           <input type='submit' name='delete_album' value='delete'>
@@ -255,9 +255,9 @@ MODAL PART
 <!-- Edit album part -->
 <div id='edit_album_popup' class='modal'>
   <div id='edit_album_content' class='modal-content'>
-      <button class='close' onclick='closeEditAlbumPopup()'>×</button>
+      <button class='close' onclick='close_edit_album()'>×</button>
       <div class='popup-message-container'>
-        <h7>EDIT ALBUM:</h7>
+        <h6>EDIT ALBUM:</h6>
           <form class='form' name='edit_album_form' action='gallery.php' onsubmit='return validEditAlbum();' method='POST'>
             <input type='hidden' id='edit_album_id' name='edit_album_id' value='0'><br>
             <h6>Input your new album name:</h6>
@@ -274,9 +274,9 @@ MODAL PART
 <!-- Remove photo from album part-->
 <div id='remove_photo_popup' class='modal'>
   <div id='remove_photo_content' class='modal-content'>
-      <button class='close' onclick='closeDeletePhotoInAlbumPopup()'>×</button>
+      <button class='close' onclick='close_remove_album()'>×</button>
       <div class='popup-message-container'>
-        <h7><b>WARNING:</b> YOU ARE GOING TO REMOVE THIS PHOTO FROM THE ALBUM!</h7>
+        <h6><strong>WARNING:</strong> YOU ARE GOING TO REMOVE THIS PHOTO FROM THE ALBUM!</h6>
           <form class='form' name='remove_photo_form' action='gallery.php' method='POST'>
             <input type='hidden' id='remove_photo_pid' name='remove_photo_pid' value='0'><br>
             <input type='hidden' id='remove_photo_aid' name='remove_photo_aid' value='0'><br>
@@ -289,9 +289,9 @@ MODAL PART
 <!-- Delete photo part-->
 <div id='delete_photo_popup' class='modal'>
   <div id='delete-photo-content' class='modal-content'>
-      <button class='close' onclick='closeDeletePhotoPopup()'>×</button>
+      <button class='close' onclick='close_delete_photo()'>×</button>
       <div class='popup-message-container'>
-        <h7><b>WARNING:</b> YOU ARE GOING TO DELETE THIS PHOTO!</h7>
+        <h6><strong>WARNING:</strong> YOU ARE GOING TO DELETE THIS PHOTO!</h6>
         <form class='form' name='delete_photo_form' action='gallery.php' method='POST'>
           <input type='hidden' id='delete_photo_id' name='delete_photo_id' value='0'><br>
           <input type='submit' name='delete_photo' value='delete'>
@@ -304,9 +304,9 @@ MODAL PART
 <!-- Edit photo part-->
 <div id='edit_photo_popup' class='modal'>
   <div id='edit_photo_content' class='modal-content'>
-      <button class='close' onclick='closeEditPhotoPopup()'>×</button>
+      <button class='close' onclick='close_edit_photo()'>×</button>
       <div class='popup-message-container'>
-        <h7>Edit Photo:</h7>
+        <h6>Edit Photo:</h6>
           <form class='form' name='edit_photo_form' action='gallery.php' onsubmit='return validEditPhoto();' method='POST'>
             <input type='hidden' id='edit_photo_id' name='edit_photo_id' value='0'><br>
             <h6>Input your new photo name:</h6>
