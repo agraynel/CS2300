@@ -1,0 +1,62 @@
+h1 {
+	font-family: "Verdana";
+	font-size: 30px;
+}
+
+h2 {
+	font-family: "Verdana";
+	font-size: 26px;
+}
+
+p {
+	font-family: "Trebuchet MS";
+	font-size: 18px;
+}
+
+
+table {
+	font-family: "Trebuchet MS";
+	font-size: 16px;
+	border-spacing: 0px;
+	border-collapse: collapse;
+}
+
+td {
+	border-width: 0px;
+	padding: 5px;
+	margin: 0px;
+}
+
+td.title {
+	width: 250px;
+}
+
+td.year {
+	width: 80px;
+}
+
+td.length {
+	width: 80px;
+}
+
+img {
+	display: block;
+}
+
+thead {
+	text-align: left;
+	font-size: 20px;
+}
+
+input {
+	margin-right: 20px;
+}
+
+.add-edit label {
+	width: 120px;
+	display: inline-block;
+}
+.add-edit input[type=text] {
+	width: 200px;
+	display: inline-block;
+}

@@ -1,0 +1,55 @@
+<!-- 
+  
+  Do not touch this file. You are encouraged to use the web inspector to view html output.
+  All imports have already been made for you, you are not to use any other libraries.
+
+ -->
+
+<html>
+<head>
+<title>Spotify Mini</title>
+<!-- BOOTSTRAP AND DEPENDENCIES -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<!-- PROJECT RESOURCES -->
+<link href='css/main.css' rel='stylesheet' type='text/css'>
+<script src="scripts/spotify-config.js"></script>
+<script src="scripts/api-calls.js"></script>
+<!-- View templates -->
+<script src="scripts/templates/song.js"></script>
+<script src="scripts/main.js"></script>
+</head>
+<body>
+<div class="header">
+  <div class="row">
+    <div class="col"><img src="img/spotify.svg" class="icon" width="30"><h1>Spot</h1></div>
+    <div class="col"><input class="form-control" placeholder="Search"></div>
+    <div class="col"><button id="login" class="btn btn-success">Login</button></div>
+  </div>
+</div>
+<div class="content">
+  <div class="container">
+    <table class="table table-spotify">
+      <thead>
+        <tr>
+          <th></th>
+          <th>SONG</th>
+          <th>ARTIST</th>
+          <th>ALBUM</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="footer">
+  <div class="title"><span class="titleDisplay">TA Message</span> <span class="darker artistDisplay">- Saqif, Greg, Brandon</span></div>
+  <audio class="player" src="audio/default.m4a" controls>
+    Your browser does not support the audio element.
+  </audio>
+</div>
+</body>
+</html>

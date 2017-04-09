@@ -1,0 +1,11 @@
+These files demonstrate 
+	- connecting to MySQL using PHP for adding, searching and modifying.
+	- the object oriented style of mysqli
+	- Pretty good form input validation
+	- Good file organization - though the two main files should probably be broken into smaller files
+	- Not good enough SQL input protection but we'll get to that later in the semester
+
+To use these files
+	1. Rename config-sample.php to config.php 
+	2. Edit config.php to contain your server username, password and database name
+	3. If you don't already have a movies table in your database, you can use the movies_table.sql file to create and populate a movies table.  Paste the content into the SQL tab in phpMyAdmin or use phpMyAdmin to import the file.

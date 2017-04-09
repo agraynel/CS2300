@@ -156,6 +156,7 @@ window.onload = function() {
 
 		// When the call is complete, we have access to the data
 		request.done( function(data) {
+			console.log(data);
 			// This is your array of pokemon, the data was converted into an object array
 			var pokemonArray = $.map(data, function(value, index) {
     			return [value];
